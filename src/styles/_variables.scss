@@ -1,0 +1,43 @@
+@use "sass:color";
+
+// Colors
+$primary-color: #4a6fa5;
+$secondary-color: #166088;
+$accent-color: #4fc1e9;
+$background-color: #f5f7fa;
+$card-back-color: #4a6fa5;
+$card-front-color: #ffffff;
+$text-color: #333333;
+$success-color: #2ecc71;
+
+// Dark mode colors
+$dark-background: #1a1a2e;
+$dark-card-back: #16213e;
+$dark-card-front: #0f3460;
+$dark-text: #e1e1e1;
+$dark-primary: #5e8b7e;
+$dark-secondary: #2c7873;
+$dark-accent: #a7c5eb;
+
+
+// Gradients
+$card-gradient: linear-gradient(135deg, $card-back-color, darken($card-back-color, 15%));
+$card-matched-gradient: linear-gradient(135deg, $success-color, darken($success-color, 15%));
+$dark-card-gradient: linear-gradient(135deg, $dark-card-back, darken($dark-card-back, 10%));
+$dark-card-matched-gradient: linear-gradient(135deg, $dark-primary, darken($dark-primary, 10%));
+
+// Sizes
+$card-size-small: 80px;
+$card-size-medium: 100px;
+$card-size-large: 120px;
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Animations
+$flip-duration: 0.3s;
+$match-duration: 0.5s;
+

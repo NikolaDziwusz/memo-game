@@ -1,0 +1,105 @@
+@import 'variables';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+select {
+  font-family: inherit;
+}
+
+// Dark mode styles
+.dark {
+  body {
+    background-color: $dark-background;
+    color: $dark-text;
+  }
+  
+  .app-container h1 {
+    color: $dark-accent;
+  }
+  
+  .game-stats, .game-history, .completion-modal {
+    background-color: $dark-card-front;
+    color: $dark-text;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .stat-value {
+    color: $dark-accent !important;
+  }
+  
+  .card {
+    .card-front {
+      background: $dark-card-gradient;
+    }
+    
+    .card-back {
+      background-color: $dark-card-front;
+    }
+    
+    &.matched .card-front {
+      background: $dark-card-matched-gradient;
+    }
+  }
+  
+  .game-controls {
+    .difficulty-selector {
+      select {
+        background-color: $dark-card-front;
+        color: $dark-text;
+        border-color: $dark-secondary;
+      }
+    }
+    
+    .game-buttons {
+      button {
+        &.start-button {
+          background-color: $dark-primary;
+          
+          &:hover {
+            background-color: darken($dark-primary, 10%);
+          }
+        }
+        
+        &.reset-button {
+          background-color: $dark-secondary;
+          
+          &:hover {
+            background-color: darken($dark-secondary, 10%);
+          }
+        }
+      }
+    }
+  }
+  
+  .history-item {
+    border-bottom-color: #2a2a3a;
+  }
+  
+  .history-date, .stat-label, .history-stats {
+    color: #aaa;
+  }
+  
+  .history-difficulty {
+    color: $dark-accent;
+  }
+}
+
