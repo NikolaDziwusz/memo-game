@@ -1,4 +1,5 @@
-@import 'variables';
+@use 'sass:color';
+@use 'variables' as *;
 
 .modal-overlay {
   position: fixed;
@@ -79,7 +80,7 @@
       transition: all 0.2s ease;
       
       &:hover {
-        background-color: darken($primary-color, 10%);
+        background-color: color.adjust($primary-color, $lightness: -10%);
         transform: translateY(-2px);
         box-shadow: 0 5px 15px rgba($primary-color, 0.4);
       }

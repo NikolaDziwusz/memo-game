@@ -21,10 +21,10 @@ $dark-accent: #a7c5eb;
 
 
 // Gradients
-$card-gradient: linear-gradient(135deg, $card-back-color, darken($card-back-color, 15%));
-$card-matched-gradient: linear-gradient(135deg, $success-color, darken($success-color, 15%));
-$dark-card-gradient: linear-gradient(135deg, $dark-card-back, darken($dark-card-back, 10%));
-$dark-card-matched-gradient: linear-gradient(135deg, $dark-primary, darken($dark-primary, 10%));
+$card-gradient: linear-gradient(135deg, $card-back-color, color.adjust($card-back-color, $lightness: -15%));
+$card-matched-gradient: linear-gradient(135deg, $success-color, color.adjust($success-color, $lightness: -15%));
+$dark-card-gradient: linear-gradient(135deg, $dark-card-back, color.adjust($dark-card-back, $lightness: -10%));
+$dark-card-matched-gradient: linear-gradient(135deg, $dark-primary, color.adjust($dark-primary, $lightness: -10%));
 
 // Sizes
 $card-size-small: 80px;

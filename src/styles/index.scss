@@ -1,4 +1,5 @@
-@import 'variables';
+@use 'sass:color';
+@use 'variables' as *;
 
 * {
   box-sizing: border-box;
@@ -75,7 +76,7 @@ select {
           background-color: $dark-primary;
           
           &:hover {
-            background-color: darken($dark-primary, 10%);
+            background-color: color.adjust($dark-primary, $lightness: -10%);
           }
         }
         
@@ -83,7 +84,7 @@ select {
           background-color: $dark-secondary;
           
           &:hover {
-            background-color: darken($dark-secondary, 10%);
+            background-color: color.adjust($dark-secondary, $lightness: -10%);
           }
         }
       }
