@@ -1,32 +1,31 @@
 name: Deploy to GitHub Pages
 
+# This workflow will build and deploy your Vite app to GitHub Pages
+# Save this as .github/workflows/deploy.yml in your repo
+
 on:
   push:
     branches:
       - main
 
-permissions:
-  contents: write
-
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
-          cache: 'pnpm'
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v3
-        with:
-          version: 8
+          node-version: 20
+
       - name: Install dependencies
         run: pnpm install
+
       - name: Build
         run: pnpm run build
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
